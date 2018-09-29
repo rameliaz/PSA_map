@@ -1,6 +1,3 @@
-# clear R environment
-rm(list = ls())
-
 #----
 # Load packages (install first if necessary)
 library("shiny")
@@ -12,10 +9,15 @@ library("dplyr")
 
 #----
 # Load data
-# Note: Shiny cannot handle pull geolocation data quick enough.
+# Note: Shiny cannot pull geocoded data quick enough.
 #       So the data needs to be saved in a csv and updated when necessary.
 #       In this code, R will pull the available csv, 
 #       but the deployment code will allow the user to update the csv. 
+
+# Note: Shiny cannot pull geocoded data quick enough.
+#       So the data is saved in a csv read by the app.
+#       In this code, R pulls the available csv, 
+#       but the deploy_app.R code will  allow the user to update the csv (if necessary). 
 DF <- read.csv("psa.comm.data.csv")
 
 #----
@@ -29,6 +31,7 @@ ui <- fluidPage(
 # server
 server <- function(input, output, session) {
   output$psa.map <- renderLeaflet({
+    # build map
     leaflet(DF) %>% 
       addTiles() %>% 
       addCircleMarkers(radius = 2, 

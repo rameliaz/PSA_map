@@ -1,34 +1,50 @@
+#----
+# Load packages (install first if necessary)
 library("rsconnect")
 library("googlesheets")
 library("ggmap")
 
 #----
-# Prompt user to update data
-# Note: Shiny cannot handle pull geolocation data quick enough.
-#       So the data called in the app is saved in a csv before running.
-#       If the user tells R the data are out-of-date, they will be updated here
-update <- readline("Would you like to update the PSA network list? (Y/N)")
+# Update data if necessary
+# READ ME: Shiny cannot pull geocoded data quick enough.
+#          So the data is saved in a csv read by the app.
+#          If the data in the csv are out-of-date (i.e., there are new PSA members)
+#          The coder can uncomment the next line of code to update the csv
 
-if (update == "Y"){
+# update <- "yes"
+if (update == "yes"){
   # Load new data from Google Sheets
   # note: R will ask user to sign into their linked Google Drive profile
-  # Note: google is working, but hitting query limits
   DF <- gs_read(ss = gs_title("Members of the Psychological Science Accelerator"),
                 na.rm = "N/A")
   
-  # Extract geolocation data using geocode function
-  # note: source set to dsk to avoid Google API query limits
-  DF.ll <- geocode(location = paste(DF$Institution, DF$`Map Info`, sep = ", "), 
+  # Geocode each PSA member
+  # Note: this can be done more efficiently without for loops
+  #       but loops provide flexibility needed to overcome limitations of geocoding services
+  DF$lng <- NA
+  DF$lat <- NA
+  
+  for (i in 1:nrow(DF)){
+    # the most accurate geocode data come from searching by institution
+    tmp <- geocode(DF$Institution[i],
                    output = "latlon",
-                   source = "google",
-                   override_limit = TRUE)
-  DF$lng <- DF.ll$lon  #  longitude
-  DF$lat <- DF.ll$lat  #  latitude
-  rm(DF.ll)
-   
+                   source = "dsk")
+    DF$lng[i] <- tmp$lon
+    DF$lat[i] <- tmp$lat
+    
+    # sometimes dsk does not recognize the institution. Use city/country in these cases
+    if (is.na(DF$lng[i])){
+      tmp <- geocode(DF$`Map Info`[i],
+                     output = "latlon",
+                     source = "dsk")
+      DF$lng[i] <- tmp$lon
+      DF$lat[i] <- tmp$lat
+      }
+  }
+  
   write.csv(DF, file = "psa.comm.data.csv")
+  rm(DF, tmp, i, update)
 }
-
 
 #----
 # Launch Shiny app!
