@@ -24,8 +24,11 @@ DF <- read.csv("psa.comm.data.csv")
 # Shiny app
 # ui
 ui <- fluidPage(
-  "PSA Shiny Map prototype",
-  leafletOutput("psa.map")
+  HTML('<center> <img src= "psa_image_small.jpg" align = "middle"> </center>'),
+  
+  fluidRow(style = "border: 4px double black;",
+           leafletOutput("psa.map")
+    )
 )
 
 # server

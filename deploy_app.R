@@ -48,5 +48,5 @@ if (update == "yes"){
 
 #----
 # Launch Shiny app!
-rsconnect::deployApp("C:/Users/Nick/OneDrive - University of Tennessee/Research/projects/accel/shiny_map",
+rsconnect::deployApp("C:/Users/Nick/OneDrive - University of Tennessee/Research/projects/psa/PSA_map",
                      appName = "PSA_Map_Prototype")
