@@ -12,4 +12,4 @@ To get started:
 - This code uses the googlesheet package to pull data on the participating labs.
 - For the data to successfully write, you will (a) need to give R access to your Google account (it will ask), and (b) have access to the Google Sheet that it pulls from.
 
-If you have any questions, you can contact me Nick via Slack, Twitter (@coles_nicholas_) or email (colesn@vols.utk.edu)
+If you have any questions, you can contact me Nick via Slack, Twitter (@coles_nicholas_) or email (colesn @ vols.utk.edu)
