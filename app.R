@@ -4,6 +4,7 @@ library("shiny")
 library("shinythemes")
 library("shinydashboard")
 library("leaflet")
+#library("leaflet.extras")
 library("htmltools")
 library("dplyr")
 
@@ -38,8 +39,8 @@ server <- function(input, output, session) {
     leaflet(DF) %>% 
       addTiles() %>% 
       addCircleMarkers(radius = 2, 
-                       popup = ~paste("<b> Lab ID: </b>", TUR_011, "<br>",
-                                      "<b> Name: </b>", First.Name, Last.Name, "<br>",
+                       popup = ~paste("<b> Lab ID: </b>", LAB.ID, "<br>",
+                                      "<b> Name: </b>", Names, "<br>",
                                       "<b> Institution: </b>", Institution, "<br>",
                                       "<b> City: </b>", City, "<br>",
                                       "<b> Country: </b>", Country, "<br>",
