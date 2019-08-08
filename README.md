@@ -1,4 +1,4 @@
-# Webinar Sains 2019 Map
+# Indonesian Science Webinar 2019 Viewing Sites Map
 Code for a generating an Indonesia map of the Indonesian Science Webinar 2019 viewing sites. We made this map to provide information to people who need to know the nearest viewing site to them.
 
 In this repo, we have:
