@@ -1,15 +1,14 @@
-# PSA_map
-Code for a generating a world map of the Psychological Science Accelerator community.
+# Webinar Sains 2019 Map
+Code for a generating an Indonesia map of the Indonesian Science Webinar 2019 viewing sites. We made this map to provide information to people who need to know the nearest viewing site to them.
 
-To get started:
-- Download all files and save to a single folder.
+In this repo, we have:
 - app.R contains the code for building the Shiny app
-- deploy_app.R contains the code for updating the locally stored list of labs (psa.comm.data.csv) using openly available geolocation services
-- the 'www' folder contains the PSA logo
+- deploy_app.R contains the code for updating the locally stored list of labs (webinar.viewing.data.csv) using openly available geolocation services
+- the 'image' folder contains the suporting organisations logo
 
 ## notes on deploy_app.R
-- Most people probably do not need to look at this app. The [outdated] data needed to test the app are in psa.comm.data.csv
-- This code uses the googlesheet package to pull data on the participating labs.
+- Most people probably do not need to look at this app. The [outdated] data needed to test the app are in webinar.viewing.data.csv
+- This code uses the googlesheet package to pull data on the viweing sites.
 - For the data to successfully write, you will (a) need to give R access to your Google account (it will ask), and (b) have access to the Google Sheet that it pulls from.
 
-If you have any questions, you can contact me via Slack, Twitter (@coles_nicholas_) or email (colesn @ vols.utk.edu; remove spaces)
+We sincerely thank Nicholas Coles as we forked his [PSA map repo](https://github.com/ColesNicholas/PSA_map) and we then modified it for Indonesian Science Webinar 2019.
