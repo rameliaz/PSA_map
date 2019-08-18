@@ -1,0 +1,10 @@
+name: viewing_sites
+title:
+username:
+account: ameliazein
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1074695
+bundleId: 2310450
+url: https://ameliazein.shinyapps.io/viewing_sites/
+when: 1565570456.14031

@@ -4,7 +4,7 @@ library("shiny")
 library("shinythemes")
 library("shinydashboard")
 library("leaflet")
-#library("leaflet.extras")
+library("leaflet.extras")
 library("htmltools")
 library("dplyr")
 
@@ -19,34 +19,38 @@ library("dplyr")
 #       So the data is saved in a csv read by the app.
 #       In this code, R pulls the available csv, 
 #       but the deploy_app.R code will  allow the user to update the csv (if necessary). 
-DF <- read.csv("psa.comm.data.csv")
+DF <- read.csv("webinar.viewing.data.csv")
 
 #----
 # Shiny app
 # ui
 ui <- fluidPage(
-  HTML('<center> <img src= "psa_image_small.jpg" align = "middle"> </center>'),
+  HTML('<center><b>LOKASI PENYIARAN WEBINAR SAINS 2019</b></center>'),
   
   fluidRow(style = "border: 4px double black;",
-           leafletOutput("psa.map")
-    )
+           leafletOutput(outputId = "webinar.map")
+  )
 )
+
 
 # server
 server <- function(input, output, session) {
-  output$psa.map <- renderLeaflet({
+  output$webinar.map <- renderLeaflet({
     # build map
     leaflet(DF) %>% 
+      setView(lng = 118, lat = -2.5, zoom = 4)  %>% #setting the view over ~ Indonesia
       addTiles() %>% 
-      addCircleMarkers(radius = 2, 
-                       popup = ~paste("<b> Lab ID: </b>", LAB.ID, "<br>",
-                                      "<b> Name: </b>", Names, "<br>",
-                                      "<b> Institution: </b>", Institution, "<br>",
-                                      "<b> City: </b>", City, "<br>",
-                                      "<b> Country: </b>", Country, "<br>",
-                                      "<b> Subfield: </b>", Subfield..Social..Cognitive..Clinical..etc..)
+      addCircles(lat = ~lat, 
+                       lng = ~lng,
+                       radius = 5, 
+                       popup = ~paste("<b> ID Lokasi Penyiaran: </b>", ID, "<br>",
+                                      "<b> Nama PIC: </b>", PIC, "<br>",
+                                      "<b> Nama Host: </b>", host, "<br>",
+                                      "<b> Universitas: </b>", universitas, "<br>",
+                                      "<b> Nama Kota dan Propinsi: </b>", mapinfo, "<br>",
+                                      "<b> Email Co-Host: </b>", email)
       )
   })
-  }
+}
 
 shinyApp(ui, server)

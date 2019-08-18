@@ -17,43 +17,26 @@ library("ggmap")
 #          1. comment out the "register google function"
 #          2. in the geocode function, change source argument to "dsk"
 
-# update <- "yes"
-if (update == "no"){
-  # Load new data from Google Sheets
-  # note: R will ask user to sign into their linked Google Drive profile
-  DF.MEMB <- gs_read(ss = gs_title("Official List of Members of the Psychological Science Accelerator"),
+# Load new data from Google Sheets
+# note: R will ask user to sign into their linked Google Drive profile
+DF.VIEWING <- gs_read(ss = gs_title("data-shiny"),
                      na.rm = "N/A")
   
-  # limit dataframe to one observation per lab
-    ## create new vector that contains all the names in each lab
-    names <- group_by(DF.MEMB, `LAB ID`) %>%
-      summarise(Names = paste0(paste(`First Name`, `Last Name`), 
-                               collapse = "; "))
-    
-    ## delete duplicate entries for each lab
-    DF.LAB <- DF.MEMB[!duplicated(DF.MEMB$`LAB ID`), ]
-    
-    ## merge lab dataframe with  list of names
-    DF.LAB <- merge(x = DF.LAB, y = names, by = "LAB ID")
-    
-    ## delete vestigial
-    rm(names)
-    
-  # Geocode each PSA lab
-  register_google(key = "PASTE GOOGLE API KEY HERE") #  to test, comment out this line
-  tmp <- geocode(location = paste0(DF.LAB$Institution, ",", 
-                                   DF.LAB$`Map Info`),
+  
+# Geocode each viewing sites
+register_google(key = "AUTH_TOKEN") #  to test, comment out this line
+tmp <- geocode(location = paste0(DF.VIEWING$`universitas`, ",", 
+                                   DF.VIEWING$`mapinfo`),
                  output = "latlon",
                  source = "google") #  to test, change this argument to "dsk"
-  DF.LAB$lng <- tmp$lon
-  DF.LAB$lat <- tmp$lat
+DF.VIEWING$lng <- tmp$lon
+DF.VIEWING$lat <- tmp$lat
   
-  # write csv
-  write.csv(DF.LAB, file = "psa.comm.data.csv")
-  rm(DF.MEMB, DF.LAB, tmp, update)
-}
+# write csv
+write.csv(DF.VIEWING, file = "webinar.viewing.data.csv")
+rm(DF.VIEWING, tmp)
 
 #----
 # Launch Shiny app!
-rsconnect::deployApp("C:/Users/Nick/OneDrive - University of Tennessee/Research/projects/psa/PSA_map",
-                     appName = "PSA_Map_Prototype")
+rsconnect::deployApp("D:/Drive/SainsTerbukaUA/IDN_OS_Webinar/webinarsains_map",
+                    appName = "viewing_sites")
