@@ -1,62 +1,56 @@
-# Issues
-# missing all names and all contributing researchers
-# map will often incorrectly place a datapoint if there are multiple cities in a country with the same name
-
-# clear R environment
-rm(list = ls())
-
 #----
-# Install and load packages by calling 'meta.pipeline.packages.R' script
+# Load packages (install first if necessary)
 library("shiny")
 library("shinythemes")
 library("shinydashboard")
-library("googlesheets")
-library("ggmap")
 library("leaflet")
+library("leaflet.extras")
 library("htmltools")
 library("dplyr")
 
-# #----
-# # Load data
-# # Note: it will ask you to sign in to your Google profile
-# DF <- gs_read(ss = gs_title("Members of the Psychological Science Accelerator"),
-#               na.rm = "N/A")
-#               
-# # extract geolocation data using geocode function
-# # note: source set to dsk to avoid Google API query limits
-# # warning: this will take a couple of minutes first time it is run.
-# DF.ll <- geocode(location = DF$'Map Info', 
-#                  output = "latlon",
-#                  source = "dsk")
-# DF$lng <- DF.ll$lon  #  longitude
-# DF$lat <- DF.ll$lat  #  latitude
-# rm(DF.ll)
-# 
-# write.csv(DF, file = "data.csv")
-DF <- read.csv("data.csv")        
+#----
+# Load data
+# Note: Shiny cannot pull geocoded data quick enough.
+#       So the data needs to be saved in a csv and updated when necessary.
+#       In this code, R will pull the available csv, 
+#       but the deployment code will allow the user to update the csv. 
+
+# Note: Shiny cannot pull geocoded data quick enough.
+#       So the data is saved in a csv read by the app.
+#       In this code, R pulls the available csv, 
+#       but the deploy_app.R code will  allow the user to update the csv (if necessary). 
+DF <- read.csv("webinar.viewing.data.csv")
+
 #----
 # Shiny app
-
 # ui
 ui <- fluidPage(
-  "PSA Shiny Map prototype",
-  leafletOutput("psa.map")
+  HTML('<center><b>LOKASI PENYIARAN WEBINAR SAINS 2019</b></center>'),
+  
+  fluidRow(style = "border: 4px double black;",
+           leafletOutput(outputId = "webinar.map")
+  )
 )
+
 
 # server
 server <- function(input, output, session) {
-  output$psa.map <- renderLeaflet({
+  output$webinar.map <- renderLeaflet({
+    # build map
     leaflet(DF) %>% 
+      setView(lng = 118, lat = -2.5, zoom = 4)  %>% #setting the view over ~ Indonesia
       addTiles() %>% 
-      addCircleMarkers(radius = 2, 
-                       popup = ~paste("<b> Lab ID: </b>", TUR_011, "<br>",
-                                      "<b> Name: </b>", First.Name, Last.Name, "<br>",
-                                      "<b> Institution: </b>", Institution, "<br>",
-                                      "<b> City: </b>", City, "<br>",
-                                      "<b> Country: </b>", Country, "<br>",
-                                      "<b> Subfield: </b>", Subfield..Social..Cognitive..Clinical..etc..)
+      addCircles(lat = ~lat, 
+                       lng = ~lng,
+                       radius = 5, 
+                       popup = ~paste("<b> ID Lokasi Penyiaran: </b>", ID, "<br>",
+                                      "<b> Nama PIC: </b>", PIC, "<br>",
+                                      "<b> Nama Host: </b>", host, "<br>",
+                                      "<b> Universitas: </b>", universitas, "<br>",
+                                      "<b> Nama Kota dan Propinsi: </b>", mapinfo, "<br>",
+                                      "<b> Email Co-Host: </b>", email)
       )
   })
-  }
+}
 
 shinyApp(ui, server)
