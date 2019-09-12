@@ -5,6 +5,6 @@ account: ameliazein
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 1074695
-bundleId: 2310450
+bundleId: 2408137
 url: https://ameliazein.shinyapps.io/viewing_sites/
-when: 1565570456.14031
+when: 1568275985.18625

@@ -1,26 +1,37 @@
 "","ID","universitas","host","kota","PIC","Nomor","email","mapinfo","lng","lat"
 "1","Aceh_01","Universitas Syiah Kuala","Program Studi Psikologi, Fakultas Kedokteran","Banda Aceh. Aceh.","Risana Rachmatan","081269127843","risanarachmatan@unsyiah.ac.id","Banda Aceh, Aceh",95.372283,5.565544
-"2","Bali_01","Universitas Pendidikan Ganesha","Fakultas Ekonomi","","Putu Sukma Kurniawan","","putusukma@undiksha.ac.id","Denpasar, Bali",115.2184651,-8.7059048
+"2","Bali_01","Universitas Pendidikan Ganesha","Fakultas Ekonomi","Denpasar, Bali","Putu Sukma Kurniawan","","putusukma@undiksha.ac.id","Denpasar, Bali",115.2190097,-8.6971746
 "3","Banten_01","Universitas Pembangunan Jaya","Fakultas Humaniora dan Bisnis","Tangerang Selatan, Banten","Aries Yulianto","08129451707","psikologi@upj.ac.id","Tangerang Selatan, Banten",106.725451,-6.2924303
 "4","DIY_01","Universitas Gadjah Mada","Fakultas Kedokteran, Keperawatan dan Kesehatan Masyarakat","Yogyakarta","Anis Fuad","","anisfuad@ugm.ac.id","Yogyakarta, DIY",110.3774998,-7.7713847
-"5","DIY_02","Universitas Mercu Buana Yogyakarta","Lembaga Penelitian dan Pengabdian kepada Masyarakat","Yogyakarta-DIY","Awan Santosa","081228859792","lppm.umby@yahoo.com","Yogyakarta, DIY",110.3056952,-7.7773818
-"6","DKI_01","Universitas Bina Nusantara","Fakultas Psikologi","","Juneman Abraham","","juneman@gmail.com","Jakarta, DKI Jakarta",106.785473,-6.2002502
+"5","DIY_02","Universitas Mercu Buana Yogyakarta","Lembaga Penelitian dan Pengabdian kepada Masyarakat","Yogyakarta-DIY","Awan Santosa","081228859792","lppm.umby@yahoo.com","Yogyakarta, DIY",110.2705605,-7.8087164
+"6","DKI_01","Universitas Bina Nusantara","Fakultas Psikologi","DKI Jakarta","Juneman Abraham","","juneman@gmail.com","Jakarta, DKI Jakarta",106.785473,-6.2002502
 "7","Jabar_01","Universitas Telkom","Prodi Administrasi Bisnis","Bandung,Jawa Barat","Astadi Pangarso","082121544543","asta_p80@yahoo.com","Bandung,Jawa Barat",107.6305287,-6.974028
 "8","Jabar_02","Universitas Indonesia","Departemen Psikologi Sosial","Depok, Jawa Barat","Annas Jiwa Pratama","087780044753","annasjpratama@gmail.com","Depok, Jawa Barat",106.8270482,-6.3627638
-"9","Jabar_03","Institut Teknologi Bandung","Fakultas Ilmu dan Teknologi Kebumian","","Dasapta Erwin","","dasaptaerwin3@gmail.com","Bandung, Jawa Barat",107.6106591,-6.89148
-"10","Jabar_04","Universitas Telkom","Prodi Administrasi Bisnis","","Astadi Pangarso","","asta_p80@yahoo.com","Bandung, Jawa Barat",107.6305287,-6.974028
-"11","Jateng_01","Universitas Negeri Semarang","Jurusan Kimia","Semarang Jawa tengah","M. Alauhdin","082143964242","alaudin99@gmail.com","Semarang, Jawa tengah",110.4409009,-7.0511282
-"12","Jatim_01","Universitas Airlangga","Fakultas Kesehatan Masyarakat","","Ilham Akhsanu Ridlo","","ilham.ridlo@fkm.unair.ac.id","Surabaya, Jawa Timur",112.7587376,-7.2720192
-"13","Jatim_02","UIN Maulana Malik Ibrahim Malang","Perpustakaan Pusat","Malang, Jawa Timur","Ari Zuntriana","081232135971","ari.zuntriana@uin-malang.ac.id","Malang, Jawa Timur",112.6074527,-7.9517844
-"14","Jatim_03","Universitas Ma Chung","Lembaga Penelitian dan Pengabdian Masyarakat (LPPM)","Malang, Jawa Timur","Taufik Chairudin","085855890424","taufik.chairudin@machung.ac.id","Malang, Jawa Timur",112.5890265,-7.957302
-"15","Jatim_04","UIN Sunan Ampel Surabaya","Faculty of Engineering (Architecture)","","Muhammad Ratodi","","mratodi@uinsby.ac.id","Surabaya, Jawa Timur",112.7342511,-7.32233
-"16","Kalbar_01","Politeknik Aisyiyah Pontianak","Lembaga Penelitian dan Pengabdian Masyarakat (LPPM)","Pontianak, Kalimantan Barat","Puji Astuti","081346295224","up3m.akbidaisyiyahptk@gmail.com","Pontianak, Kalimantan Barat",109.291908,-0.0442209
-"17","Maluku_01","Politeknik Negeri Ambon","Fakultas Manajemen","Ambon","Dian Utami Sutiksno","","","Ambon, Maluku",128.181049,-3.6591347
-"18","Papua_Barat_01","IAIN Sorong","Fakultas Pendidikan","Sorong","Ismail Wekke","","iswekke@gmail.com","Sorong, Papua Barat",131.3335396,-0.9368361
-"19","Sulsel_01","IAIN BONE","LP2M","Watampone, Sulawesi Selatan","Andi Ashari","081354474784","Andi.stain@gmail.com","Watampone, Sulawesi Selatan",120.3121178,-4.4915647
-"20","Sulut_01","Universitas Sam Ratulangi","Prodi Farmasi/Farmasi/Farmasetik/FMIPA","Manado - Sulawesi Utara","Surya Sumantri","081241377032","suryasumantri@unsrat.ac.id","Manado, Sulawesi Utara",124.8268959,1.4595804
-"21","Sumbar_01","STKIP PGRI Sumatera Barat","UP3M","Padang/Sumatera Barat","Villia Anggraini","08126765345","p3mstkippgrisumbar@gmail.com","Padang, Sumatera Barat",100.3676579,-0.909689
-"22","Sumut_01","Universitas Sumatera Utara","Faculty of Math and Natural Sciences","Medan, Sumatera Utara","Prana Ugi","","gioprana89@gmail.com","Medan, Sumatera Utara",98.6563423,3.561676
-"23","DIY_03","Universitas Widya Dharma","Faculty of Teacher Training and Education","Klaten, Daerah Istimewa Yogyakarta","Eric Kunto Wibowo","","erickunto@unwidha.id","Klaten, Daerah Istimewa Yogyakarta",110.6243366,-7.6926194
-"24","Sultra_01","Universitas Halu Oleo","Pascasarjana Universitas Halu Oleo","Kendari, Sulawesi Tenggara","Muh Nadzirin Anshari Nur","081342713802","nadzirin@gmail.com","Kendari, Sulawesi Tenggara",122.5227249,-4.0086915
-"25","Gorontalo_01","Universitas Muhammadiyah Gorontalo","Fakultas Sains & Teknologi","Kabupaten Gorontalo Provinsi Gorontalo","Ivan Taslim","081342180507","ivantaslim@umgo.ac.id","Gorontalo, Gorontalo",123.0156907,0.6204909
+"9","Jabar_03","Institut Teknologi Bandung","Fakultas Ilmu dan Teknologi Kebumian","Bandung, Jawa Barat","Dasapta Erwin","","dasaptaerwin3@gmail.com","Bandung, Jawa Barat",107.6106591,-6.89148
+"10","Jateng_01","Universitas Negeri Semarang","Jurusan Kimia","Semarang Jawa tengah","M. Alauhdin","082143964242","alaudin99@gmail.com","Semarang, Jawa tengah",110.3962596,-7.0084498
+"11","Jatim_01","Universitas Airlangga","Fakultas Kesehatan Masyarakat","Surabaya, Jawa Timur","Ilham Akhsanu Ridlo","","ilham.ridlo@fkm.unair.ac.id","Surabaya, Jawa Timur",112.7587376,-7.2720192
+"12","Jatim_02","UIN Maulana Malik Ibrahim Malang","Perpustakaan Pusat","Malang, Jawa Timur","Ari Zuntriana","081232135971","ari.zuntriana@uin-malang.ac.id","Malang, Jawa Timur",112.6074527,-7.9517844
+"13","Jatim_03","Universitas Ma Chung","Lembaga Penelitian dan Pengabdian Masyarakat (LPPM)","Malang, Jawa Timur","Taufik Chairudin","085855890424","taufik.chairudin@machung.ac.id","Malang, Jawa Timur",112.5890265,-7.957302
+"14","Jatim_04","UIN Sunan Ampel Surabaya","Faculty of Engineering (Architecture)","Surabaya, Jawa Timur","Muhammad Ratodi","","mratodi@uinsby.ac.id","Surabaya, Jawa Timur",112.7342511,-7.32233
+"15","Kalbar_01","Politeknik Aisyiyah Pontianak","Lembaga Penelitian dan Pengabdian Masyarakat (LPPM)","Pontianak, Kalimantan Barat","Puji Astuti","081346295224","up3m.akbidaisyiyahptk@gmail.com","Pontianak, Kalimantan Barat",109.291908,-0.0442209
+"16","Maluku_01","Politeknik Negeri Ambon","Fakultas Manajemen","Maluku","Dian Utami Sutiksno","","","Ambon, Maluku",128.181049,-3.6591347
+"17","Papua_Barat_01","IAIN Sorong","Fakultas Pendidikan","Sorong","Ismail Wekke","","iswekke@gmail.com","Sorong, Papua Barat",131.3335396,-0.9368361
+"18","Sulsel_01","IAIN BONE","LP2M","Watampone, Sulawesi Selatan","Andi Ashari","081354474784","Andi.stain@gmail.com","Watampone, Sulawesi Selatan",120.3121178,-4.4915647
+"19","Sulut_01","Universitas Sam Ratulangi","Prodi Farmasi/Farmasi/Farmasetik/FMIPA","Manado - Sulawesi Utara","Surya Sumantri","081241377032","suryasumantri@unsrat.ac.id","Manado, Sulawesi Utara",124.8268959,1.4595804
+"20","Sumbar_01","STKIP PGRI Sumatera Barat","UP3M","Padang/Sumatera Barat","Villia Anggraini","08126765345","p3mstkippgrisumbar@gmail.com","Padang, Sumatera Barat",100.3676579,-0.909689
+"21","Sumut_01","Universitas Sumatera Utara","Faculty of Math and Natural Sciences","Medan, Sumatera Utara","Prana Ugi","","gioprana89@gmail.com","Medan, Sumatera Utara",98.6563423,3.561676
+"22","DIY_03","Universitas Widya Dharma","Faculty of Teacher Training and Education","Klaten, Daerah Istimewa Yogyakarta","Eric Kunto Wibowo","","erickunto@unwidha.id","Klaten, Daerah Istimewa Yogyakarta",110.6243366,-7.6926194
+"23","Sultra_01","Universitas Halu Oleo","Pascasarjana Universitas Halu Oleo","Kendari, Sulawesi Tenggara","Muh Nadzirin Anshari Nur","081342713802","nadzirin@gmail.com","Kendari, Sulawesi Tenggara",122.5227249,-4.0086915
+"24","Gorontalo_01","Universitas Muhammadiyah Gorontalo","Fakultas Sains & Teknologi","Kabupaten Gorontalo Provinsi Gorontalo","Ivan Taslim","081342180507","ivantaslim@umgo.ac.id","Gorontalo, Gorontalo",123.0156907,0.6204909
+"25","Jateng_02","Universitas Dian Nuswantoro","Fakultas Kesehatan","Kota Semarang, Propinsi Jawa Tengah","Eti Rimawati","081390575460","eti.rimawati@dsn.dinus.ac.id","Semarang, Jawa tengah",110.4092008,-6.9826317
+"26","NTB_01","Universitas Nahdlatul Wathan Mataram, NTB","Administrasi Bisnis","Mataram, Nusa Tenggara Barat (NTB)","Didin Hadi Saputra","081337399205","didinimarc@gmail.com","Mataram, Nusa Tenggara Barat",116.09956,-8.583549
+"27","AUS_01","The University of Sydney","Sydney School of Public Health","Sydney","Stella Benita","+61424063917","","Sydney",151.2090603,-33.8715262
+"28","Jateng_03","Universitas Islam Sultan Agung","Perpustakaan UNISSULA","Semarang, Jawa Tengah","Muhammad Saiful Alam","085228876675","alam@unissula.ac.id; saiful@alam.web.id","Semarang, Jawa tengah",110.4585761,-6.9549388
+"29","Maluku_02","Universitas Iqra Buru","Pusat Studi Perencanaan dan Pembangunan Masyarakat Universitas Iqra Buru","Maluku","M Chairul Basrun Umanailo","082239711615","chairulbasrun@gmail.com","Maluku",127.1050706,-3.2747703
+"30","Jatim_05","Institut Agama Islam Darullughah Wadda'wah","Komunikasi penyiaran islam","Pasuruan, Jawa Timur","Mochammad Sirojul Munir","","msirojulm@gmail.com","Pasuruan, Jawa Timur",112.774676,-7.603831
+"31","Jabar_04","Universitas Ibn Khaldun Bogor","Teknik Informatika","Bogor, Jawa Barat","Dr. Budi Susetyo","+6281510447076","budi.susetyo@uika-bogor.ac.id","Bogor, Jawa Barat",106.7921304,-6.5608821
+"32","Sulsel_02","Universitas Islam Makassar","ELEKTRO/INFORMATIK/TEKNIK","Makassar, Sulawesi Selatan","DR. IR. ANDI MUHAMMAD ARIF BIJAKSANA, MSI.","081343780992","andimarifbijaksana@uim-makassar.ac.id","Makassar, Sulawesi Selatan",119.4806394,-5.140905
+"33","Kaltim_01","STEI Al Arsyadi Kutai Kartanegara","Prodi","Kutai Kertanegara, Kalimantan Timur","SAPI`I","081255577014","muhammadsyafii980@gmail.com","Kutai Kertanegara, Kalimantan Timur",117.2055729,-0.9248649
+"34","Kalsel_01","Islamic University of Kalimantan","Faculty of Social and Political Science","Banjarmasin, Kalimantan Selatan","Dr Muhammad Uhaib As'ad","+6281345421310","uhaibm@yahoo.com","Banjarmasin, Kalimantan Selatan",114.5949296,-3.2894776
+"35","DKI_02","Lembaga Ilmu Pengetahuan Indonesia","Pusat Data dan Dokumentasi Ilmiah","DKI Jakarta","Cahyo Trianggoro","087805744940","cahyotriangs@gmail.com","DKI Jakarta",106.8461392,-6.1254164
+"36","Jabar_05","Universitas Ibn Khaldun","Fakultas Ekonomi dan Bisnis","Bogor, Jawa Barat","M Azis Firdaus","081384149386","azisfirdaus@uika-bogor.ac.id","Bogor, Jawa Barat",106.7921304,-6.5608821
