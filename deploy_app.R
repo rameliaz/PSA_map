@@ -25,8 +25,9 @@ DF.VIEWING <- gs_read(ss = gs_title("data-shiny"),
   
 # Geocode each viewing sites
 register_google(key = "AUTH_TOKEN") #  to test, comment out this line
-tmp <- geocode(location = paste0(DF.VIEWING$`universitas`, ",", 
-                                   DF.VIEWING$`mapinfo`),
+tmp <- geocode(location = paste0(DF.VIEWING$`host`, ",",
+                                 DF.VIEWING$`universitas`, ",", 
+                                 DF.VIEWING$`mapinfo`),
                  output = "latlon",
                  source = "google") #  to test, change this argument to "dsk"
 DF.VIEWING$lng <- tmp$lon
